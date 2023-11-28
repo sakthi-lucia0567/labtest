@@ -5,6 +5,7 @@ import mysql2 from "mysql2";
 import sequelize from "./config/database.js";
 import { authRouter } from "./routes/auth.js";
 import { appointmentRouter } from "./routes/appointment.js";
+import { testDetailRouter } from "./routes/test-detail.js";
 
 dotenv.config();
 const app = express();

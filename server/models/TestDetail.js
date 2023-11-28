@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/database.js"; // Sequelize configuration file
-import Admin from "./Admin";
 
 const testDetails = sequelize.define("test_details", {
   test_id: {
