@@ -1,11 +1,16 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../config/database.js"; // Sequelize configuration file
+import User from "./User.js";
 
 const Appointment = sequelize.define("appointment", {
   appointment_id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
+  },
+  appointment_number: {
+    type: DataTypes.STRING,
+    allowNull: false,
   },
   patient_name: {
     type: DataTypes.STRING,
@@ -51,6 +56,14 @@ const Appointment = sequelize.define("appointment", {
   status: {
     type: DataTypes.STRING,
     allowNull: false,
+  },
+  user_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: User,
+      key: "user_id",
+    },
   },
 });
 

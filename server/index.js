@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import mysql2 from "mysql2";
 import sequelize from "./config/database.js";
 import { authRouter } from "./routes/auth.js";
+import { appointmentRouter } from "./routes/appointment.js";
 
 dotenv.config();
 const app = express();
@@ -17,11 +18,12 @@ app.get("/", (req, res) => {
 });
 
 app.use("/auth", authRouter);
+app.use("/api", appointmentRouter);
 
 const PORT = process.env.PORT || 8001;
 
 // Synchronize models with the database
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   console.log("Database synced");
 });
 
