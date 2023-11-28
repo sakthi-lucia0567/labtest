@@ -7,7 +7,6 @@ import {
   employeeLogin,
   employeeRegister,
 } from "../controller/auth.js";
-import { verifyToken } from "../middleware/auth.js";
 
 const router = express.Router();
 
