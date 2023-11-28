@@ -3,40 +3,74 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mysql2 from "mysql2";
 import sequelize from "./config/database.js";
-import passport from "passport";
-import session from "express-session";
+import { authRouter } from "./routes/auth.js";
+// import passport from "passport";
+// import session from "express-session";
 
-import { initializePassport } from "./middleware/passport-config.js";
-initializePassport(passport, (email) =>
-  user.find((user) => user.email == email)
-);
+// import { initializePassport } from "./middleware/passport-config.js";
+// initializePassport(
+//   passport,
+//   (email) => user.find((user) => user.email == email),
+//   (id) => id.find((user) => user.id == id)
+// );
 
 dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: false,
+//   })
+// );
+// app.use(passport.initialize());
+// app.use(passport.session());
 
-//ROUTES//
+//ROUTES
 app.get("/", (req, res) => {
   res.send("Api Running Successfully :)");
 });
 
+app.use("/auth", authRouter);
+
+//Authentication
+
+// app.post(
+//   "/login",
+//   checkNotAuthenticated,
+//   passport.authenticate("local", {
+//     successRedirect: "/", // Redirect to dashboard on successful login
+//     failureRedirect: "/login", // Redirect to login page on failed login
+//   })
+// );
+
+// app.delete("/logout", (req, res) => {
+//   req.logOut();
+//   res.redirect("/login");
+// });
+
 const PORT = process.env.PORT || 8001;
 
 // Synchronize models with the database
-sequelize.sync().then(() => {
+sequelize.sync({ force: false }).then(() => {
   console.log("Database synced");
 });
+
+// function checkAuthenticated(req, res, next) {
+//   if (req.isAuthenticated()) {
+//     return next();
+//   }
+//   res.redirect("/login");
+// }
+// function checkNotAuthenticated(req, res, next) {
+//   if (req.isAuthenticated()) {
+//     return res.redirect("/");
+//   }
+//   next();
+// }
 
 const connection = mysql2.createConnection(process.env.MYSQL_URL);
 

@@ -1,10 +1,20 @@
 import express from "express";
 
-import { login, register } from "../controller/auth.js";
+import {
+  userLogin,
+  userRegister,
+  adminLogin,
+  employeeLogin,
+  employeeRegister,
+} from "../controller/auth.js";
+import { verifyToken } from "../middleware/auth.js";
 
 const router = express.Router();
 
-router.post("/register", register);
-router.post("/login", login);
+router.post("/userRegister", userRegister);
+router.post("/userLogin", userLogin);
+router.post("/adminLogin", adminLogin);
+router.post("/employeeLogin", employeeLogin);
+router.post("/employeeRegister", employeeRegister);
 
 export { router as authRouter };

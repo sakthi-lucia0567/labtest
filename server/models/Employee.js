@@ -9,7 +9,7 @@ const Employee = sequelize.define("employee", {
     autoIncrement: true,
     unique: true,
   },
-  name: {
+  username: {
     type: DataTypes.STRING,
     allowNull: false,
   },
