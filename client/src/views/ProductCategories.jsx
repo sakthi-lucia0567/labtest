@@ -4,6 +4,15 @@ import Box from "@mui/material/Box";
 import ButtonBase from "@mui/material/ButtonBase";
 import Container from "@mui/material/Container";
 import Typography from "../components/Typography";
+import GallaryImage1 from "../assets/GallaryImage1.jpg";
+import GallaryImage2 from "../assets/GallaryImage2.jpg";
+import GallaryImage3 from "../assets/GallaryImage3.jpg";
+import GallaryImage4 from "../assets/GallaryImage4.jpg";
+import GallaryImage5 from "../assets/GallaryImage5.jpg";
+import GallaryImage6 from "../assets/GallaryImage6.jpg";
+import GallaryImage7 from "../assets/GallaryImage7.jpg";
+import GallaryImage8 from "../assets/GallaryImage8.jpg";
+import GallaryImage9 from "../assets/GallaryImage9.jpg";
 
 const ImageBackdrop = styled("div")(({ theme }) => ({
   position: "absolute",
@@ -55,48 +64,48 @@ const ImageIconButton = styled(ButtonBase)(({ theme }) => ({
 
 const images = [
   {
-    url: "https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=400",
-    title: "Snorkeling",
+    url: `${GallaryImage1}`,
+    title: "Complete Blood Count",
     width: "40%",
   },
   {
-    url: "https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400",
-    title: "Massage",
+    url: `${GallaryImage2}`,
+    title: "Gout",
     width: "20%",
   },
   {
-    url: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400",
-    title: "Hiking",
+    url: `${GallaryImage3}`,
+    title: "magnesium test",
     width: "40%",
   },
   {
-    url: "https://images.unsplash.com/photo-1453747063559-36695c8771bd?auto=format&fit=crop&w=400",
-    title: "Tour",
+    url: `${GallaryImage4}`,
+    title: "Urinalysis",
     width: "38%",
   },
   {
-    url: "https://images.unsplash.com/photo-1523309996740-d5315f9cc28b?auto=format&fit=crop&w=400",
-    title: "Gastronomy",
+    url: `${GallaryImage5}`,
+    title: "Cholesterol test",
     width: "38%",
   },
   {
-    url: "https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?auto=format&fit=crop&w=400",
-    title: "Shopping",
+    url: `${GallaryImage6}`,
+    title: "Pregnancy",
     width: "24%",
   },
   {
-    url: "https://images.unsplash.com/photo-1506941433945-99a2aa4bd50a?auto=format&fit=crop&w=400",
-    title: "Walking",
+    url: `${GallaryImage7}`,
+    title: "Blood Type",
     width: "40%",
   },
   {
-    url: "https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400",
-    title: "Fitness",
+    url: `${GallaryImage8}`,
+    title: "Hiv Test",
     width: "20%",
   },
   {
-    url: "https://images.unsplash.com/photo-1518136247453-74e7b5265980?auto=format&fit=crop&w=400",
-    title: "Reading",
+    url: `${GallaryImage9}`,
+    title: "Fertility",
     width: "40%",
   },
 ];
@@ -105,7 +114,7 @@ export default function ProductCategories() {
   return (
     <Container component='section' sx={{ mt: 8, mb: 4 }}>
       <Typography variant='h4' marked='center' align='center' component='h2'>
-        For all tastes and all desires
+        Tailored Tests for Every Need
       </Typography>
       <Box sx={{ mt: 8, display: "flex", flexWrap: "wrap" }}>
         {images.map((image) => (

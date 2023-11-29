@@ -6,9 +6,12 @@ import Container from "@mui/material/Container";
 import Button from "../components/Button";
 import Typography from "../components/Typography";
 
-import productHowItWorks1 from "../assets/productHowItWorks1.svg";
-import productHowItWorks2 from "../assets/productHowItWorks2.svg";
 import productHowItWorks3 from "../assets/productHowItWorks3.svg";
+
+import Delivery from "../assets/delivery.png";
+import Laboratory from "../assets/laboratory.png";
+
+import ProductCurvyLines from "../assets/appCurvyLines.png";
 
 const item = {
   display: "flex",
@@ -47,7 +50,7 @@ function ProductHowItWorks() {
       >
         <Box
           component='img'
-          src='/static/themes/onepirate/productCurvyLines.png'
+          src={ProductCurvyLines}
           alt='curvy lines'
           sx={{
             pointerEvents: "none",
@@ -64,12 +67,7 @@ function ProductHowItWorks() {
             <Grid item xs={12} md={4}>
               <Box sx={item}>
                 <Box sx={number}>1.</Box>
-                <Box
-                  component='img'
-                  src={productHowItWorks1}
-                  alt='suitcase'
-                  sx={image}
-                />
+                <Box component='img' src={Delivery} alt='suitcase' sx={image} />
                 <Typography variant='h5' align='center'>
                   Appointment every Wednesday 9am.
                 </Typography>
@@ -78,12 +76,7 @@ function ProductHowItWorks() {
             <Grid item xs={12} md={4}>
               <Box sx={item}>
                 <Box sx={number}>2.</Box>
-                <Box
-                  component='img'
-                  src={productHowItWorks2}
-                  alt='graph'
-                  sx={image}
-                />
+                <Box component='img' src={Laboratory} alt='graph' sx={image} />
                 <Typography variant='h5' align='center'>
                   First come, first served. Our offers are in limited
                   quantities, so be quick.

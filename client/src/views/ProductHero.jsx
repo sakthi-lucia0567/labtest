@@ -2,9 +2,9 @@ import * as React from "react";
 import Button from "../components/Button";
 import Typography from "../components/Typography";
 import ProductHeroLayout from "./ProductHeroLayout";
+import productHero from "../assets/ProductHeroLab.jpg";
 
-const backgroundImage =
-  "https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400";
+const backgroundImage = productHero;
 
 export default function ProductHero() {
   return (
@@ -22,7 +22,7 @@ export default function ProductHero() {
         alt='increase priority'
       />
       <Typography color='inherit' align='center' variant='h2' marked='center'>
-        Upgrade your Sundays
+        BUY YOUR OWN LAB TESTS
       </Typography>
       <Typography
         color='inherit'
@@ -30,7 +30,9 @@ export default function ProductHero() {
         variant='h5'
         sx={{ mb: 4, mt: { xs: 4, sm: 10 } }}
       >
-        Enjoy secret offers up to -70% off the best luxury hotels every Sunday.
+        Our cost-effective services stretch beyond diagnostics, meaning our
+        tools and solutions scale with your business to meet your analytical,
+        clinical and operational needs.
       </Typography>
       <Button
         color='secondary'
@@ -40,7 +42,7 @@ export default function ProductHero() {
         href='/premium-themes/onepirate/sign-up/'
         sx={{ minWidth: 200 }}
       >
-        Register
+        Shop Tests
       </Button>
       <Typography variant='body2' color='inherit' sx={{ mt: 2 }}>
         Discover the experience

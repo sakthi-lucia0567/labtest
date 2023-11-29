@@ -4,9 +4,12 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import Typography from "../components/Typography";
-import productValues1 from "../assets/productValues1.svg";
-import productValues2 from "../assets/productValues2.svg";
+
 import productValues3 from "../assets/productValues3.svg";
+import ProductCurvyLines from "../assets/appCurvyLines.png";
+
+import Clinic from "../assets/clinical.png";
+import Health from "../assets/health.png";
 
 const item = {
   display: "flex",
@@ -24,7 +27,7 @@ function ProductValues() {
       <Container sx={{ mt: 15, mb: 30, display: "flex", position: "relative" }}>
         <Box
           component='img'
-          src='/static/themes/onepirate/productCurvyLines.png'
+          src={ProductCurvyLines}
           alt='curvy lines'
           sx={{ pointerEvents: "none", position: "absolute", top: -180 }}
         />
@@ -33,21 +36,19 @@ function ProductValues() {
             <Box sx={item}>
               <Box
                 component='img'
-                src={productValues1}
+                src={Clinic}
                 alt='suitcase'
                 sx={{ height: 55 }}
               />
               <Typography variant='h6' sx={{ my: 5 }}>
-                The best luxury hotels
+                Clinical Trials
               </Typography>
               <Typography variant='h5'>
                 {
-                  "From the latest trendy boutique hotel to the iconic palace with XXL pool"
+                  "Browse global clinical trials to find new treatment options for you or a loved one"
                 }
 
-                {
-                  ", go for a mini-vacation just a few subway stops away from your home."
-                }
+                {", go for a test just a few stops away from your home."}
               </Typography>
             </Box>
           </Grid>
@@ -55,19 +56,19 @@ function ProductValues() {
             <Box sx={item}>
               <Box
                 component='img'
-                src={productValues2}
+                src={Health}
                 alt='graph'
                 sx={{ height: 55 }}
               />
               <Typography variant='h6' sx={{ my: 5 }}>
-                New experiences
+                Health Resources
               </Typography>
               <Typography variant='h5'>
                 {
-                  "Privatize a pool, take a Japanese bath or wake up in 900m2 of garden… "
+                  "Learn about screenings, condition management and more in our resource center. "
                 }
 
-                {"your Sundays will not be alike."}
+                {"your Tests will not be alike."}
               </Typography>
             </Box>
           </Grid>
@@ -83,7 +84,9 @@ function ProductValues() {
                 Exclusive rates
               </Typography>
               <Typography variant='h5'>
-                {"By registering, you will access specially negotiated rates "}
+                {
+                  "you can get health insights at an affordable price with lab tests under $100. "
+                }
                 {"that you will not find anywhere else."}
               </Typography>
             </Box>

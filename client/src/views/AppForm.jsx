@@ -4,6 +4,8 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Paper from "../components/Paper";
 
+import AppCurvyLines from "../assets/appCurvyLines.png";
+
 function AppForm(props) {
   const { children } = props;
 
@@ -11,7 +13,7 @@ function AppForm(props) {
     <Box
       sx={{
         display: "flex",
-        backgroundImage: "url(/static/appCurvyLines.png)",
+        backgroundImage: `url(${AppCurvyLines})`,
         backgroundRepeat: "no-repeat",
       }}
     >
